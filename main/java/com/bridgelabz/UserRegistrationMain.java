@@ -19,7 +19,7 @@ public class UserRegistrationMain {
         String email=scanner.next();
         regex.validateEmail(email);
 
-        System.out.println("\nEnter mobile no as per format: (e.g. 91 9867859848) ");
+        System.out.println("\nEnter mobile no as per format: (e.g. 91 8962782418) ");
         scanner.nextLine();
         String mobileNo=scanner.nextLine();
         regex.validateMobileNo(mobileNo);
