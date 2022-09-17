@@ -14,13 +14,11 @@ public class UserRegistrationRegex {
         }
         return isValid;
     }
-
     public boolean validateLastName(String name){
 //        Validation for firstName or lastName is same
         boolean isValid = validateFirstName(name);
         return isValid;
     }
-
     public boolean validateEmail(String email){
 /*        E.g. abc.xyz@bl.co.in
         Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in)
@@ -34,7 +32,6 @@ public class UserRegistrationRegex {
             System.out.println("email is not valid => "+email);
         return isValid;
     }
-
     public boolean validateMobileNo(String mobileNo){
         Pattern pattern= Pattern.compile("^[\\d]{2}\\s[\\d]{10}$");
         boolean isValid = pattern.matcher(mobileNo).matches();
@@ -45,7 +42,6 @@ public class UserRegistrationRegex {
         }
         return isValid;
     }
-
     public boolean validatePassword(String password){
         boolean isValid=validatePassRule1(password);
         if (isValid){
@@ -62,7 +58,6 @@ public class UserRegistrationRegex {
             }
         }
         return false;
-
     }
     boolean validatePassRule1(String password){
         //minimum 8 characters
@@ -75,7 +70,6 @@ public class UserRegistrationRegex {
         }
         return isValid;
     }
-
     boolean validatePassRule2(String password){
         //At least one upperCase letter
         Pattern pattern=Pattern.compile("(?=.*[A-Z])[\\S]{8,}");
@@ -88,7 +82,6 @@ public class UserRegistrationRegex {
         return isValid;
     }
     boolean validatePassRule3(String password){
-        //aAt least one upperCase letter
         Pattern pattern=Pattern.compile("(?=.*[A-Z])(?=.*[0-9])[\\S]{8,}");
         Boolean isValid=pattern.matcher(password).matches();
         if (isValid){
